@@ -1,12 +1,19 @@
-#include "SdlLayerInstanceDelegator.h"
+#include "TestDoubleSdlLayerInstanceDelegator.h"
 
-class TestDoubleSdlLayerInstanceDelegator: public SdlLayerInstanceDelegator {
-public:
-  TestDoubleSdlLayerInstanceDelegator();
-  virtual ~TestDoubleSdlLayerInstanceDelegator();
+TestDoubleSdlLayerInstanceDelegator::TestDoubleSdlLayerInstanceDelegator(){}
 
-  const SDL_version *SDL_Linked_Version();
-  int SDL_Init(int bitMask);
-  void *SDL_SetVideoMode(int x, int y, int bitDepth, int mode);
-  void SDL_WM_SetCaption(const char *title, int someIntValue);
-};
+TestDoubleSdlLayerInstanceDelegator::~TestDoubleSdlLayerInstanceDelegator(){}
+
+const SDL_version *TestDoubleSdlLayerInstanceDelegator::SDL_Linked_Version() {
+  return 0;
+}
+
+int TestDoubleSdlLayerInstanceDelegator::SDL_Init(int bitMask) {
+  return 0;
+}
+
+void *TestDoubleSdlLayerInstanceDelegator::SDL_SetVideoMode(int x, int y, int bitDepth, int mode) {
+  return 0;
+}
+
+void TestDoubleSdlLayerInstanceDelegator::SDL_WM_SetCaption(const char *title, int someIntValue){}
